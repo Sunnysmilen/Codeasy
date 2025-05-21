@@ -1,0 +1,15 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  img {
+    height: auto;
+    width: 250px;
+  }
+  section {
+    border: solid black 2px;
+    padding: 3rem;
+    margin-top: -50px;
+  }
+}
