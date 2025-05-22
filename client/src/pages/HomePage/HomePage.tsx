@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import "./HomePage.css";
 
-
 function HomePage() {
   localStorage.setItem("score", "");
 
@@ -25,7 +24,6 @@ function HomePage() {
       <Link to="/summary-page">
         <button type="button">C'est parti !</button>
       </Link>
-
     </div>
   );
 }

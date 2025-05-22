@@ -16,8 +16,8 @@ function ResultPage({ score }: ResultPageProps) {
         <h1>
           Mission accomplie !
           <div className="scoreDisplayBloc">
-            <div className="blob1"></div>
-            <div className="blob2"></div>
+            <div className="blob1" />
+            <div className="blob2" />
             <div className="scoreDisplay">Score : {score}🚀 </div>
           </div>
         </h1>

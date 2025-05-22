@@ -44,17 +44,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/result-page",
-        element: <ResultPage />,
+        element: <ResultPage score={0} />,
       },
       {
         path: "/apropos",
         element: <ErrorPage />,
       },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
     ],
-  },
-  {
-    path: "*",
-    element: <ErrorPage />,
   },
 ]);
 
