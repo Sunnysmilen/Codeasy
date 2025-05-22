@@ -8,6 +8,7 @@
 .editorHeader {
   margin: 1em 0 0.5em 0;
   color: var(--text-color);
+  font-family: "Orbitron", sans-serif;
 }
 
 .notionText {
@@ -18,7 +19,7 @@
 
 .responsBtn {
   margin-top: 0.7em;
-  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: medium;
 
   margin-bottom: 1em;
