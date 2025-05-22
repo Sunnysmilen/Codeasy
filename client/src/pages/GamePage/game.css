@@ -1,0 +1,64 @@
+/* Bloc de la page */
+
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--primary-color);
+}
+
+/* Titre de la page */
+.editorHeader {
+  margin-top: 1em;
+  color: var(--text-color);
+  font-family: "Orbitron", sans-serif;
+}
+/* Barre de progression */
+.progressBar {
+  margin-bottom: 0.5em;
+}
+
+.notionText {
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Bloc paragraphe énoncer */
+.dataText {
+  margin-bottom: 0.5em;
+}
+
+/* Boutton réponse */
+.responsBtn {
+  margin-top: 0.7em;
+  font-family: "Orbitron", sans-serif;
+  font-size: medium;
+  color: black;
+  margin-bottom: 1em;
+  background-color: #60ccf5;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  &:hover {
+    color: var(--tertiary-color);
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.editor_wrapper {
+  width: 90vw;
+  margin-top: 2em;
+  z-index: 0;
+}
+
+.exercise {
+  font-size: .8em;
+}

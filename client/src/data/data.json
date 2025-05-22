@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "theme": "HTML",
+    "questions": [
+      {
+        "title": "La première balise",
+        "course": "HTML est le langage utilisé pour structurer une page web. La balise <html> indique le début du code HTML. Tout ce qui se trouve entre <html> et </html> est compris comme faisant partie de la page web. C’est la base de toute page HTML.",
+        "exercise": "Entoure le mot Bonjour avec les balises HTML de base.",
+        "answer": "<html>Bonjour</html>"
+      },
+      {
+        "title": "Un vrai titre !",
+        "course": "Pour ajouter un titre à une page, on utilise les balises <h1> à <h6>. <h1> est le titre principal, et <h6> est le plus petit. C’est une façon de hiérarchiser l'information sur la page.",
+        "exercise": "Écris un titre de niveau 1 qui dit Bienvenue sur mon site.",
+        "answer": "<h1>Bienvenue sur mon site</h1>"
+      },
+      {
+        "title": "Un paragraphe simple",
+        "course": "La balise <p> sert à écrire un paragraphe. Elle permet de structurer le texte pour qu’il soit plus lisible. Chaque paragraphe commence par <p> et se termine par </p>.",
+        "exercise": "Écris un paragraphe qui dit Ceci est un test.",
+        "answer": "<p>Ceci est un test.</p>"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "theme": "CSS",
+    "questions": [
+      {
+        "title": "Changer la couleur du texte",
+        "course": "CSS permet de modifier l'apparence du HTML. La propriété `color` change la couleur du texte. On l'applique sur un élément (comme p, h1, etc.) en écrivant `élément { color: valeur; }`.",
+        "exercise": "Applique la couleur rouge à un paragraphe.",
+        "answer": "p { color: red; }"
+      },
+      {
+        "title": "Fond coloré",
+        "course": "La propriété `background-color` permet de changer la couleur de fond d’un élément HTML. Par exemple, un titre ou un paragraphe peut avoir un fond coloré avec cette propriété.",
+        "exercise": "Mets le fond bleu pour les titres <h1>.",
+        "answer": "h1 { background-color: blue; }"
+      },
+      {
+        "title": "Couleur hexadécimale",
+        "course": "En CSS, on peut écrire les couleurs avec un code hexadécimal. Par exemple, `#00FF00` est un vert vif. Cela donne plus de choix que les noms de couleurs simples.",
+        "exercise": "Applique #00FF00 à tous les <h2>.",
+        "answer": "h2 { color: #00FF00; }"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "theme": "JavaScript",
+    "questions": [
+      {
+        "title": "Hello World !",
+        "course": "JavaScript est un langage qui permet de rendre une page web interactive. Le plus simple pour commencer est d’écrire un message dans la console avec `console.log()`. C’est souvent la première ligne qu’on apprend !",
+        "exercise": "Affiche Hello world! dans la console.",
+        "answer": "console.log(\"Hello world!\");"
+      },
+      {
+        "title": "Créer une variable",
+        "course": "Une variable est un espace de stockage dans le code. On la crée avec `let` ou `const`, suivi d’un nom. Par exemple : `let nom = 'Alice';` stocke le texte Alice dans la variable nom.",
+        "exercise": "Crée une variable `nom` qui vaut Alice.",
+        "answer": "let nom = 'Alice';"
+      },
+      {
+        "title": "Changer une valeur",
+        "course": "Une fois qu’on a une variable, on peut changer sa valeur avec `=`. Cela permet d’adapter le contenu selon les besoins. Par exemple : `nom = 'Bob';` change la variable nom.",
+        "exercise": "Change la variable `nom` en Bob.",
+        "answer": "nom = 'Bob';"
+      }
+    ]
+  }
+]
