@@ -28,6 +28,10 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+      {
+        path: "/homepage",
+        element: <HomePage />,
+      },
     ],
     // Renders the App component for the home page
   },
