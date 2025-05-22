@@ -42,16 +42,22 @@ function Games() {
 
   // Answer validation , score and next question
   const handleClick = () => {
+    // trimed strings to compare values:
+    const trimedAnswer = question?.questions[currentQuestion].answer
+      .toLowerCase()
+      .trim()
+      .replace(/ /g, "");
+
+    const trimedResponse = response?.toLowerCase().trim().replace(/ /g, "");
+    //console.log(trimedAnswer, trimedResponse);
+
     if (currentQuestion >= data[themeIndex].questions.length - 1) {
       setTimeout(() => {
         navigate(`/result-page/${id}`);
       }, 400);
     }
 
-    if (
-      question?.questions[currentQuestion].answer.trim().toLowerCase() ===
-      response?.trim().toLowerCase()
-    ) {
+    if (trimedAnswer === trimedResponse) {
       setTimeout(() => {
         setCurrentQuestion(currentQuestion + 1);
         setScore(score + 1);
