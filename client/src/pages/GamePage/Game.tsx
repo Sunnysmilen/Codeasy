@@ -1,6 +1,7 @@
 import Editor from "@monaco-editor/react";
 import { useState } from "react";
 import "./game.css";
+
 function Games() {
   const [response, setResponse] = useState("");
 
