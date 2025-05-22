@@ -9,8 +9,8 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 import App from "./App";
 import Games from "./pages/GamePage/Game";
 import HomePage from "./pages/HomePage/HomePage";
-import SummaryPage from "./pages/SummaryPage/SummaryPage";
 import ResultPage from "./pages/ResultPage/ResultPage";
+import SummaryPage from "./pages/SummaryPage/SummaryPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
