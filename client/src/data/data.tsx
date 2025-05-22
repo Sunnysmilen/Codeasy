@@ -51,7 +51,7 @@ const data = [
     questions: [
       {
         title: "Créer une variable",
-        course: "Une variable se déclare avec `let`, `const` ou `var`. ",
+        course: "Une variable se déclare avec `let` ou `const`. ",
         exercise: "Crée une variable `nom` qui vaut Alice.",
         answer: "let nom = Alice;",
       },
