@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
-  margin: 0;
+  background-color: #252746;
 }
 
 #root {

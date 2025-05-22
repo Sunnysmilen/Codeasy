@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 
 function SummaryList () {
 
@@ -52,4 +52,4 @@ const data = [
 ]
 
 
-export default SummaryList;
+export default SummaryList;*/
