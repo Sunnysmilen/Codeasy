@@ -7,8 +7,8 @@
     padding: 2rem;
     img {
       height: auto;
-      width: 250px;
-      margin-top: -184px;
+      width: 60%;
+      margin-top: -124px;
       margin-right: 40px;
     }
     section {
@@ -26,11 +26,56 @@
       border: none;
       box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
       font-family: "Orbitron", sans-serif;
+      background-color: #252746;
+      &:hover {
+        background-color: #586d96;
+        color: white;
+      }
+    }
+  }
+  .homepage-container h1 {
+    font-family: "Orbitron", sans-serif;
+    padding: 0 1rem 2rem 0.5rem;
+  }
+  .homepage-container p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-family: "Calibri", sans-serif;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    img {
+      height: auto;
+      width: 60%;
+      margin-top: -184px;
+      margin-right: 40px;
+    }
+    section {
+      border: solid black 2px;
+      border-radius: 20px;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
+      margin-top: 160px;
+      padding: 0rem 1.5rem 0rem 1.5rem;
+    }
+    button {
+      margin-top: 25px;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      width: 100%;
+      border: none;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
+      font-family: "Orbitron", sans-serif;
+      background-color: #252746;
 
       &:hover {
         background-color: #586d96;
         color: white;
-   }
+      }
     }
   }
   .homepage-container h1 {
@@ -41,95 +86,55 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
     font-family: "Calibri", sans-serif;
   }
-  @media screen and (min-width: 768px) and (max-width: 992px) {
-    .homepage-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-      img {
-        height: auto;
-        width: 250px;
-        margin-top: -184px;
-        margin-right: 40px;
-      }
-      section {
-        border: solid black 2px;
-        border-radius: 20px;
-        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
-        margin-top: 160px;
-        padding: 0rem 1.5rem 0rem 1.5rem;
-      }
-      button {
-        margin-top: 25px;
-        padding: 0.5rem 1rem;
-        border-radius: 15px;
-        width: 150px;
-        border: none;
-        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
-        font-family: "Orbitron", sans-serif;
+}
 
-        &:hover {
-          background-color: #fde929;
-        }
-      }
+@media screen and (min-width: 992px) {
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 12rem;
+
+    img {
+      height: auto;
+      width: 250px;
+      margin-top: -184px;
+      margin-right: 40px;
     }
-    .homepage-container h1 {
+    section {
+      border: solid black 2px;
+      border-radius: 20px;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
+      margin-top: 160px;
+      padding: 0rem 1.5rem 0rem 1.5rem;
+    }
+    button {
+      margin-top: 25px;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      width: 100%;
+      border: none;
+      font-size: 1.5em;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
       font-family: "Orbitron", sans-serif;
-      padding: 0 1rem 2rem 1rem;
-    }
-    .homepage-container p {
-      padding: 0 1.5rem 1.5rem 1.5rem;
-      font-family: "Calibri", sans-serif;
+      background-color: #252746;
+
+      &:hover {
+        background-color: #586d96;
+        color: white;
+      }
     }
   }
-
-  @media screen and (min-width: 992px) {
-    .homepage-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding-top: 15rem;
-
-      img {
-        height: auto;
-        width: 250px;
-        margin-top: -184px;
-        margin-right: 40px;
-      }
-      section {
-        border: solid black 2px;
-        border-radius: 20px;
-        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
-        margin-top: 160px;
-        padding: 0rem 1.5rem 0rem 1.5rem;
-      }
-      button {
-        margin-top: 25px;
-        padding: 0.5rem 1rem;
-        border-radius: 15px;
-        width: 250px;
-        border: none;
-        font-size: 2em;
-        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
-        font-family: "Orbitron", sans-serif;
-
-        &:hover {
-          background-color: #fde929;
-        }
-      }
-    }
-    .homepage-container h1 {
-      font-family: "Orbitron", sans-serif;
-      padding: 0 1rem 2rem 1rem;
-    }
-    .homepage-container p {
-      padding: 0 1.5rem 1.5rem 1.5rem;
-      font-family: "Calibri", sans-serif;
-    }
+  .homepage-container h1 {
+    font-family: "Orbitron", sans-serif;
+    padding: 0 1rem 2rem 1rem;
   }
+  .homepage-container p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-family: "Calibri", sans-serif;
+  }
+
   .homepage-container h1 {
     font-family: "Orbitron", sans-serif;
     padding: 0 1rem 2rem 1rem;
