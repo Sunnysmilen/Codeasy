@@ -8,7 +8,13 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 // Import the main app component
 import App from "./App";
 import Games from "./pages/GamePage/Game";
+<<<<<<< HEAD
 
+=======
+import HomePage from "./pages/HomePage/HomePage";
+import SummaryPage from "./pages/SummaryPage/SummaryPage";
+import ResultPage from "./pages/ResultPage/ResultPage";
+>>>>>>> 16c0a41c34eb1f142aa84707406e49801aaeb7cd
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -22,6 +28,7 @@ import Games from "./pages/GamePage/Game";
 
 const router = createBrowserRouter([
   {
+<<<<<<< HEAD
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
   },
@@ -29,6 +36,33 @@ const router = createBrowserRouter([
   {
     path: "/games", // The root path
     element: <Games />, // Renders the App component for the home page
+=======
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "/homepage",
+        element: <HomePage />,
+      },
+      {
+        path: "/game",
+        element: <Games />,
+      },
+
+      {
+        path: "/summary-page",
+        element: <SummaryPage />,
+      },
+      {
+        path: "/result-page",
+        element: <ResultPage />,
+      },
+    ],
+>>>>>>> 16c0a41c34eb1f142aa84707406e49801aaeb7cd
   },
 ]);
 

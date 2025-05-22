@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "./HomePage.css";
 
 function HomePage() {
@@ -11,7 +12,9 @@ function HomePage() {
         <h1>Bienvenue dans le monde du code ! </h1>
         <p>Pas besoin d’être un geek : ici, on apprend en s’amusant.</p>
       </section>
-      <button type="button">C'est parti !</button>
+      <Link to="/game">
+        <button type="button">C'est parti !</button>
+      </Link>
     </div>
   );
 }
