@@ -1,7 +1,11 @@
 import { Link } from "react-router";
 import "./ResultPage.css";
 
-function ResultPage() {
+interface ResultPageProps {
+  score: number;
+}
+
+function ResultPage({ score }: ResultPageProps) {
   return (
     <div className="resultpage-container">
       <section>
@@ -9,7 +13,14 @@ function ResultPage() {
           src="/image-resultat.png"
           alt="Robot félicitant le résultat d'un pouce levé"
         />
-        <h1>Mission accomplie ! 🚀 </h1>
+        <h1>
+          Mission accomplie !
+          <div className="scoreDisplayBloc">
+            <div className="blob1"></div>
+            <div className="blob2"></div>
+            <div className="scoreDisplay">Score : {score}🚀 </div>
+          </div>
+        </h1>
         <p>Notion terminée, tu gères.</p>
       </section>
       <Link to="/summary-page">

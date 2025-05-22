@@ -1,40 +1,26 @@
-/* Bloc de la page */
-
 .editorContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: var(--primary-color);
 }
 
-/* Titre de la page */
 .editorHeader {
-  margin-top: 1em;
+  margin: 1em 0 0.5em 0;
   color: var(--text-color);
-  font-family: "Orbitron", sans-serif;
-}
-/* Barre de progression */
-.progressBar {
-  margin-bottom: 0.5em;
 }
 
 .notionText {
+  margin-bottom: 1em;
   color: var(--text-color);
   text-align: center;
 }
 
-/* Bloc paragraphe énoncer */
-.dataText {
-  margin-bottom: 0.5em;
-}
-
-/* Boutton réponse */
 .responsBtn {
   margin-top: 0.7em;
-  font-family: "Orbitron", sans-serif;
+  font-family: sans-serif;
   font-size: medium;
-  color: black;
+
   margin-bottom: 1em;
   background-color: #60ccf5;
   padding: 12px 24px;
@@ -51,13 +37,4 @@
   &:active {
     transform: scale(0.95);
   }
-}
-
-.editor_wrapper {
-  width: 90vw;
-  margin-top: 2em;
-}
-
-.exercise {
-  font-size: .8em;
 }
