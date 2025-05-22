@@ -6,7 +6,10 @@
   .navbar {
     display: flex;
   }
-
+  a.navbar-link {
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+  }
   ul {
     display: flex;
     flex-direction: column;
