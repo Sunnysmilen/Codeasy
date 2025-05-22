@@ -1,17 +1,16 @@
 import { Link } from "react-router";
-
+import { useParams } from "react-router";
 import "./ResultPage.css";
-/*import { useEffect, useState } from "react";*/
 
 function ResultPage() {
-  /*const [items, setItems] = useState([]);*/
+  const { id } = useParams();
 
-  /* useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("score"));
-    if (items) {
-      setItems(items);
-    }
-  }, []);*/
+  const scoreKey = `score${id}`;
+  const scoreString = localStorage.getItem(scoreKey);
+  const score = scoreString ? JSON.parse(scoreString) : 0;
+
+  console.log(localStorage);
+
   return (
     <div className="resultpage-container">
       <section>
@@ -24,7 +23,7 @@ function ResultPage() {
           <div className="scoreDisplayBloc">
             <div className="blob1" />
             <div className="blob2" />
-            <div className="scoreDisplay">Score : items 🚀 </div>
+            <div className="scoreDisplay">Score : {score} 🚀 </div>
           </div>
         </h1>
         <p>Notion terminée, tu gères.</p>
