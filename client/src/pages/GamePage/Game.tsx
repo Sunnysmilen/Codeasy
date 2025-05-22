@@ -59,7 +59,7 @@ function Games() {
       }, 1000);
     } else {
       alert(
-        `faux!, la bonne réponse était: \n${data[themeIndex].questions[currentQuestion].answer}`,
+        `faux!, la bonne réponse était: \n${data[themeIndex].questions[currentQuestion].answer}`
       );
       setCurrentQuestion(currentQuestion + 1);
       setResponse("");
@@ -72,6 +72,12 @@ function Games() {
   return (
     <div className="editorContainer">
       <h1 className="editorHeader">Code Editor</h1>
+      <progress
+        className="progressBar"
+        value={currentQuestion}
+        max={currentQuestion + 1}
+      />
+
       <p className="notionText">
         {data[themeIndex].questions[currentQuestion].course}
       </p>
@@ -79,6 +85,7 @@ function Games() {
         À toi de jouer! {data[themeIndex].questions[currentQuestion].exercise}
       </p>
       <div className="editor_wrapper">
+        {" "}
         <Editor
           height={250}
           defaultLanguage={data[themeIndex].theme.toLowerCase()}
