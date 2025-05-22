@@ -18,12 +18,17 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to={"/themesquiz"} className="navbar-link">
-              Thèmes quiz
+            <Link to={"/summary-page"} className="navbar-link">
+              Thèmes
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to={"/resultats"} className="navbar-link">
+            <Link to={"/game"} className="navbar-link">
+              Quiz
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to={"/result-page"} className="navbar-link">
               Résultats
             </Link>
           </li>
