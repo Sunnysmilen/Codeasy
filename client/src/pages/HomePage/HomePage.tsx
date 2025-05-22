@@ -12,7 +12,7 @@ function HomePage() {
         <h1>Bienvenue dans le monde du code ! </h1>
         <p>Pas besoin d’être un geek : ici, on apprend en s’amusant.</p>
       </section>
-      <Link to="/game">
+      <Link to="/summary-page">
         <button type="button">C'est parti !</button>
       </Link>
     </div>
