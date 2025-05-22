@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+// import { useState } from "react";
+/*
 function SummaryList() {
   const [selected, setSelected] = useState(null);
   const toggle = (i) => {
@@ -19,7 +19,7 @@ function SummaryList() {
             <div className="title" onClick={() => toggle(i)}>
               <h2>{cours.theme}</h2>
               <h3>0%</h3>
-              <span>{selected == i ? "-" : "+"}</span>
+              <span>{selected === i ? "-" : "+"}</span>
             </div>
             <div className={selected === i ? "content show" : "content"}>
               {cours.sujets}
@@ -50,3 +50,4 @@ const data = [
 ];
 
 export default SummaryList;
+*/

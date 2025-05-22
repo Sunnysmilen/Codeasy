@@ -19,7 +19,13 @@ function HomePage() {
         <h1>Bienvenue dans le monde du code ! </h1>
         <p>Pas besoin d’être un geek : ici, on apprend en s’amusant.</p>
       </section>
+<<<<<<< HEAD
       <button type="button">C'est parti !</button>
+=======
+      <Link to="/summary-page">
+        <button type="button">C'est parti !</button>
+      </Link>
+>>>>>>> c7f1e64c40dfb17431407cb51635b89308267532
     </div>
   );
 }
