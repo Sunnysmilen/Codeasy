@@ -6,7 +6,8 @@ function ResultPage() {
   const { id } = useParams();
 
   const scoreKey = `score${id}`;
-  /*const score = JSON.parse(localStorage.getItem(scoreKey));*/
+  const scoreString = localStorage.getItem(scoreKey);
+  const score = scoreString ? JSON.parse(scoreString) : 0;
 
   console.log(localStorage);
 
@@ -22,7 +23,7 @@ function ResultPage() {
           <div className="scoreDisplayBloc">
             <div className="blob1" />
             <div className="blob2" />
-            <div className="scoreDisplay">Score : {scoreKey} 🚀 </div>
+            <div className="scoreDisplay">Score : {score} 🚀 </div>
           </div>
         </h1>
         <p>Notion terminée, tu gères.</p>
