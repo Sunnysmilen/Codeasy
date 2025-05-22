@@ -7,10 +7,11 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 // Import the main app component
 import App from "./App";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Games from "./pages/GamePage/Game";
 import HomePage from "./pages/HomePage/HomePage";
-import SummaryPage from "./pages/SummaryPage/SummaryPage";
 import ResultPage from "./pages/ResultPage/ResultPage";
+import SummaryPage from "./pages/SummaryPage/SummaryPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -46,7 +47,15 @@ const router = createBrowserRouter([
         path: "/result-page",
         element: <ResultPage />,
       },
+      {
+        path: "/apropos",
+        element: <ErrorPage />,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 
