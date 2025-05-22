@@ -20,9 +20,6 @@ import data from "../../data/data.json";
 
 type IStandaloneCodeEditor = Parameters<OnMount>[0];
 
-
-
-
 function Games() {
   const { id } = useParams();
   const [response, setResponse] = useState<string | undefined>("");
@@ -40,7 +37,7 @@ function Games() {
     if (id) {
       setQuestion(data[themeIndex]);
     }
-  }, [themeIndex]);
+  }, [id, themeIndex]);
 
   const handleClick = () => {
     console.log(response);
@@ -60,7 +57,7 @@ function Games() {
       }, 1000);
     } else {
       alert(
-        `faux!, la bonne réponse était: \n${data[themeIndex].questions[currentQuestion].answer}`
+        `faux!, la bonne réponse était: \n${data[themeIndex].questions[currentQuestion].answer}`,
       );
       setCurrentQuestion(currentQuestion + 1);
       setResponse("");
