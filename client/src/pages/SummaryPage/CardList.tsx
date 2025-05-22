@@ -7,7 +7,7 @@ function CardList () {
     return (
         <div className="container">
             {data.map((cours) => (
-            <Card key={cours.id} theme={cours.theme} />))}
+            <Card key={cours.id} id={cours.id} theme={cours.theme} />))}
         </div>
     )
 }

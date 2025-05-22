@@ -2,7 +2,7 @@ import { Editor, type OnMount } from "@monaco-editor/react";
 import { useEffect, useRef, useState } from "react";
 import "./game.css";
 
-//import { useParams } from "react-router";
+import { useParams } from "react-router";
 import data from "../../data/data.json";
 
 /*type QuestionType = {
@@ -20,8 +20,8 @@ import data from "../../data/data.json";
 
 type IStandaloneCodeEditor = Parameters<OnMount>[0];
 
-//const { id } = useParams();
-const id = 1;
+const { id } = useParams();
+
 
 function Games() {
   const [response, setResponse] = useState<string | undefined>("");

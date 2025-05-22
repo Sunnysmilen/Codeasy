@@ -1,13 +1,15 @@
-type props = {theme: string}
+type props = {theme: string, id: number}
 
+
+import { Link } from "react-router";
 import "./Card.css";
 
-function Card ({theme, }: props) {
+function Card ({theme, id }: props) {
     return (
-        <div className="course">
+        <Link to={`/games/${id}`} className="course">
             <h1>{theme}</h1>
             <h3>0%</h3>
-        </div>
+        </Link>
     )
 }
 

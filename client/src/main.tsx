@@ -23,11 +23,10 @@ import SummaryPage from "./pages/SummaryPage/SummaryPage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
     children: [
       {
-        index: true,
+        path: "/",
         element: <HomePage />,
       },
       {
@@ -35,7 +34,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/games",
+        path: "/games/:id",
         element: <Games />,
       },
 
