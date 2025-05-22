@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # codeasy
 
 Ce projet est un monorepo JS, suivant l'architecture React-Express-MySQL telle qu'enseignée à la Wild Code School (v7.2.4) :
@@ -44,7 +45,7 @@ Il est pré-configuré avec un ensemble d'outils pour aider les étudiants à pr
 
 ## Table des Matières
 
-- [codeasy](#name)
+- [codeasy](#codeasy)
   - [Table des Matières](#table-des-matières)
   - [Installation \& Utilisation](#installation--utilisation)
   - [Les choses à retenir](#les-choses-à-retenir)
@@ -63,6 +64,7 @@ Il est pré-configuré avec un ensemble d'outils pour aider les étudiants à pr
     - [Variables d'environnement spécifiques](#variables-denvironnement-spécifiques)
     - [Logs](#logs)
     - [Contribution](#contribution)
+- [Codeasy](#codeasy-1)
 
 ## Installation & Utilisation
 
@@ -75,13 +77,13 @@ Il est pré-configuré avec un ensemble d'outils pour aider les étudiants à pr
 
 ### Commandes de Base
 
-| Commande               | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| `npm install`          | Installe les dépendances pour le client et le serveur                       |
-| `npm run db:migrate`   | Met à jour la base de données à partir d'un schéma défini                   |
-| `npm run dev`          | Démarre les deux serveurs (client et serveur) dans un seul terminal         |
-| `npm run check`        | Exécute les outils de validation (linting et formatage)                     |
-| `npm run test`         | Exécute les tests unitaires et d'intégration                                |
+| Commande             | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
+| `npm install`        | Installe les dépendances pour le client et le serveur               |
+| `npm run db:migrate` | Met à jour la base de données à partir d'un schéma défini           |
+| `npm run dev`        | Démarre les deux serveurs (client et serveur) dans un seul terminal |
+| `npm run check`      | Exécute les outils de validation (linting et formatage)             |
+| `npm run test`       | Exécute les tests unitaires et d'intégration                        |
 
 ### Structure des Dossiers
 
@@ -234,7 +236,7 @@ class ItemRepository {
 export default new ItemRepository();
 ```
 
-**Ajouter un middleware** 
+**Ajouter un middleware**
 
 ```typescript
 // ...
@@ -250,7 +252,7 @@ const foo: RequestHandler = (req, res, next) => {
   req.message = "hello middleware";
 
   next();
-}
+};
 
 router.get("/api/items", foo, itemActions.browse);
 
@@ -284,7 +286,7 @@ declare global {
 ### REST
 
 | Opération | Méthode | Chemin d'URL | Corps de la requête | SQL    | Réponse (Succès)               | Réponse (Erreur)                                                       |
-|-----------|---------|--------------|---------------------|--------|--------------------------------|------------------------------------------------------------------------|
+| --------- | ------- | ------------ | ------------------- | ------ | ------------------------------ | ---------------------------------------------------------------------- |
 | Browse    | GET     | /items       |                     | SELECT | 200 (OK), liste des items.     |                                                                        |
 | Read      | GET     | /items/:id   |                     | SELECT | 200 (OK), un item.             | 404 (Not Found), si id invalide.                                       |
 | Add       | POST    | /items       | Données de l'item   | INSERT | 201 (Created), id d'insertion. | 400 (Bad Request), si corps invalide.                                  |
@@ -294,6 +296,7 @@ declare global {
 ### Autres Bonnes Pratiques
 
 - **Sécurité** :
+
   - Validez et échappez toujours les entrées des utilisateurs.
   - Utilisez HTTPS pour toutes les communications réseau.
   - Stockez les mots de passe de manière sécurisée en utilisant des hash forts (ex : argon2).
@@ -308,33 +311,43 @@ declare global {
 ## FAQ
 
 ### Installation avec Docker
+
 > ⚠️ Prérequis : Vous devez avoir installé Docker et Docker Compose sur votre machine.  
 > Suivez les instructions ici : [Docker Installation](https://docs.docker.com/get-docker/).
 
 Lorsque Docker est installé et démarré, exécutez la commande suivante pour construire l'image Docker et démarrer les conteneurs :
+
 ```bash
 docker compose up -d --build
 ```
+
 La partie _client_ de l'application sera accessible à l'adresse http://localhost:3000 et la partie _serveur_ à l'adresse http://localhost:3310.  
 Pour arrêter et supprimer les conteneurs, exécutez :
+
 ```bash
 docker compose down
 ```
 
 #### Mode développement
-Les dépendances (du dossier `node_modules`) sont installées dans le conteneur Docker et ne seront pas visibles directement. Si vous utilisez un IDE comme VSCode et que vous souhaitez modifier des fichiers de votre application, vous devez installer les dépendances localement pour prévenir toute erreur de fichiers manquants.  
+
+Les dépendances (du dossier `node_modules`) sont installées dans le conteneur Docker et ne seront pas visibles directement. Si vous utilisez un IDE comme VSCode et que vous souhaitez modifier des fichiers de votre application, vous devez installer les dépendances localement pour prévenir toute erreur de fichiers manquants.
+
 ```bash
 npm install
 ```
 
 #### Installation de nouvelles dépendances
+
 Pour installer de nouvelles dépendances, procédez en local comme d'habitude avec `npm install <package-name>`, puis, synchronisez les dépendances dans le conteneur Docker avec la commande suivante :
+
 ```bash
 docker compose exec web sh -c "npm install"
 ```
 
 #### Accéder à la base de données
+
 Pour vous connecter à la base de données avec votre terminal, exécutez la commande suivante :
+
 ```bash
 docker compose exec database sh -c "mysql -uuser -ppassword js_template_fullstack"
 ```
@@ -389,7 +402,8 @@ Nous accueillons avec plaisir les contributions ! Veuillez suivre ces étapes po
 
 - Assurez-vous que votre code respecte les standards de codage en exécutant `npm run check` avant de pousser vos modifications.
 - Ajoutez des tests pour toute nouvelle fonctionnalité ou correction de bug.
-- Documentez clairement vos modifications dans la description de la pull request.
-=======
+- # Documentez clairement vos modifications dans la description de la pull request.
+
 # Codeasy
->>>>>>> f84f1b9 (Initial commit)
+
+> > > > > > > f84f1b9 (Initial commit)
