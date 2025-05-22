@@ -11,6 +11,7 @@ import Games from "./pages/GamePage/Game";
 import HomePage from "./pages/HomePage/HomePage";
 import ResultPage from "./pages/ResultPage/ResultPage";
 import SummaryPage from "./pages/SummaryPage/SummaryPage";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -46,7 +47,15 @@ const router = createBrowserRouter([
         path: "/result-page",
         element: <ResultPage />,
       },
+      {
+        path: "/apropos",
+        element: <ErrorPage />,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 
@@ -62,7 +71,7 @@ if (rootElement == null) {
 createRoot(rootElement).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 );
 
 /**
