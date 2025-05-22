@@ -26,7 +26,11 @@ function ResultPage() {
             <div className="scoreDisplay">Score : {score} 🚀 </div>
           </div>
         </h1>
-        <p>Notion terminée, tu gères.</p>
+        <p>
+          {score < 2
+            ? "ho..lly..shit!! you suck!"
+            : "Notion terminée, tu gères!"}
+        </p>
       </section>
       <Link to="/summary-page">
         <button type="button">Retour au thème</button>

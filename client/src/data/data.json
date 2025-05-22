@@ -18,8 +18,8 @@
       {
         "title": "Un paragraphe simple",
         "course": "La balise <p> sert à écrire un paragraphe. Elle permet de structurer le texte pour qu’il soit plus lisible. Chaque paragraphe commence par <p> et se termine par </p>.",
-        "exercise": "Écris un paragraphe qui dit Ceci est un test.",
-        "answer": "<p>Ceci est un test.</p>"
+        "exercise": "Écris un paragraphe qui dit Ceci est un test",
+        "answer": "<p>Ceci est un test</p>"
       }
     ]
   },
@@ -28,25 +28,26 @@
     "theme": "CSS",
     "questions": [
       {
-        "title": "Changer la couleur du texte",
-        "course": "CSS permet de modifier l'apparence du HTML. La propriété `color` change la couleur du texte. On l'applique sur un élément (comme p, h1, etc.) en écrivant `élément { color: valeur; }`.",
-        "exercise": "Applique la couleur rouge à un paragraphe.",
-        "answer": "p { color: red; }"
+        "title": "Largeur d'un élément",
+        "course": "En CSS, la propriété `width` définit la largeur d’un élément. L’unité `em` est relative à la taille du texte. Par exemple, `2em` représente deux fois la taille de police actuelle. C’est plus flexible que les pixels.",
+        "exercise": "Donne une largeur de 10em à une div.",
+        "answer": "div { width: 10em; }"
       },
       {
-        "title": "Fond coloré",
-        "course": "La propriété `background-color` permet de changer la couleur de fond d’un élément HTML. Par exemple, un titre ou un paragraphe peut avoir un fond coloré avec cette propriété.",
-        "exercise": "Mets le fond bleu pour les titres <h1>.",
-        "answer": "h1 { background-color: blue; }"
+        "title": "Hauteur d'un élément",
+        "course": "La propriété height permet de contrôler la hauteur d’un élément. Avec `em`, on rend le design adaptable à la taille du texte, ce qui améliore l’accessibilité et la responsivité.",
+        "exercise": "Donne une hauteur de 5em à une div.",
+        "answer": "div { height: 5em; }"
       },
       {
-        "title": "Couleur hexadécimale",
-        "course": "En CSS, on peut écrire les couleurs avec un code hexadécimal. Par exemple, `#00FF00` est un vert vif. Cela donne plus de choix que les noms de couleurs simples.",
-        "exercise": "Applique #00FF00 à tous les <h2>.",
-        "answer": "h2 { color: #00FF00; }"
+        "title": "Cacher un élément",
+        "course": "La propriété display permet de contrôler la manière dont un élément est affiché. En mettant {display: none}, l’élément disparaît complètement de la page, comme s’il n’était pas là.",
+        "exercise": "Cache tous les paragraphes avec display.",
+        "answer": "p { display: none; }"
       }
     ]
   },
+
   {
     "id": 3,
     "theme": "JavaScript",
@@ -61,13 +62,13 @@
         "title": "Créer une variable",
         "course": "Une variable est un espace de stockage dans le code. On la crée avec `let` ou `const`, suivi d’un nom. Par exemple : `let nom = 'Alice';` stocke le texte Alice dans la variable nom.",
         "exercise": "Crée une variable `nom` qui vaut Alice.",
-        "answer": "let nom = 'Alice';"
+        "answer": "let nom = \"Alice\";"
       },
       {
         "title": "Changer une valeur",
         "course": "Une fois qu’on a une variable, on peut changer sa valeur avec `=`. Cela permet d’adapter le contenu selon les besoins. Par exemple : `nom = 'Bob';` change la variable nom.",
         "exercise": "Change la variable `nom` en Bob.",
-        "answer": "nom = 'Bob';"
+        "answer": "nom = \"Bob\";"
       }
     ]
   }
