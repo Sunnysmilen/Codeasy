@@ -1,9 +1,9 @@
 @media screen and (max-width: 768px) {
   h2 {
     text-align: center;
-    color: #60ccf5;
+    color: white;
     font-size: 1em;
-    background-color: #1f275c;
+    background-color: #586d96;
     padding: 1em;
   }
 
@@ -17,9 +17,9 @@
 @media screen and (min-width: 768px) and (max-width: 992px) {
   h2 {
     text-align: center;
-    color: #60ccf5;
+    color: white;
     font-size: 1em;
-    background-color: #1f275c;
+    background-color: #586d96;
     padding: 1em;
   }
 
@@ -33,9 +33,9 @@
 @media screen and (min-width: 992px) {
   h2 {
     text-align: center;
-    color: #60ccf5;
+    color: white;
     font-size: 1.5em;
-    background-color: #1f275c;
+    background-color: #586d96;
     padding: 1em;
   }
 

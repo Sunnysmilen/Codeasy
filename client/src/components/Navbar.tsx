@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/image-logo.png";
 import "../styles/navbar.css";
 import { Link } from "react-router";
 
@@ -13,27 +13,38 @@ export default function Navbar() {
         <img src={logo} alt="Logo codeasy" className="logo" />
         <ul className="nav-links">
           <li className="navbar-item">
-            <Link to={"/homepage"} className="navbar-link">
+            <Link
+              to={"/homepage"}
+              className="navbar-link"
+              onClick={() => setShowLinks(false)}
+            >
               Homepage{" "}
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to={"/summary-page"} className="navbar-link">
-              Thèmes
+            <Link
+              to={"/summary-page"}
+              className="navbar-link"
+              onClick={() => setShowLinks(false)}
+            >
+              Thèmes quiz
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to={"/game"} className="navbar-link">
-              Quiz
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to={"/result-page"} className="navbar-link">
+            <Link
+              to={"/result-page"}
+              className="navbar-link"
+              onClick={() => setShowLinks(false)}
+            >
               Résultats
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to={"/apropos"} className="navbar-link">
+            <Link
+              to={"/apropos"}
+              className="navbar-link"
+              onClick={() => setShowLinks(false)}
+            >
               A Propos
             </Link>
           </li>

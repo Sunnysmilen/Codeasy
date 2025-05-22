@@ -2,10 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
-  margin: 0;
+  background-color: #252746;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+}
+p {
+  font-family: "Calibri", sans-serif;
 }
 
 #root {
