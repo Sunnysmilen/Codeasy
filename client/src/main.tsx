@@ -32,6 +32,11 @@ const router = createBrowserRouter([
         path: "/game",
         element: <Games />,
       },
+
+      {
+        path: "/Summary",
+        element: <SummaryPage />,
+      },
     ],
   },
 ]);
