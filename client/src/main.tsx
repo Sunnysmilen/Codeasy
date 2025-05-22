@@ -7,7 +7,18 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 // Import the main app component
 import App from "./App";
-import Games from "./pages/Games";
+import Games from "./pages/GamePage/Game";
+
+
+// Import additional components for new routes
+// Try creating these components in the "pages" folder
+
+// import About from "./pages/About";
+// import Contact from "./pages/Contact";
+
+/* ************************************************************************* */
+
+
 
 const router = createBrowserRouter([
   {

@@ -1,0 +1,19 @@
+import "./HomePage.css";
+
+function HomePage() {
+  return (
+    <div className="homepage-container">
+      <section>
+        <img
+          src="/image-accueil.webp"
+          alt="Robot souhaitant la bienvenue d'un signe de la main"
+        />
+        <h1>Bienvenue dans le monde du code ! </h1>
+        <p>Pas besoin d’être un geek : ici, on apprend en s’amusant.</p>
+      </section>
+      <button type="button">C'est parti !</button>
+    </div>
+  );
+}
+
+export default HomePage;
