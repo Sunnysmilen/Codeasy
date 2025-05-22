@@ -1,9 +1,10 @@
 import { Editor, type OnMount } from "@monaco-editor/react";
 import { useEffect, useRef, useState } from "react";
 import "./game.css";
-
+import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useParams } from "react-router";
 import data from "../../data/data.json";
+import { toast, ToastContainer } from "react-toastify";
 
 type Question = {
   title: string;
@@ -40,11 +41,23 @@ function Games() {
     }
   }, [id, themeIndex]);
 
+  const notify = (correctAnswer: string) => {
+    toast.error(`😭 😭 😭 La bonne réponse était : ${correctAnswer}`, {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  };
+  const notifySuccess = () => {
+    toast.success("👏👏👏 Bonne réponse !", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  };
   // Answer validation , score and next question
   const handleClick = () => {
     if (currentQuestion >= data[themeIndex].questions.length - 1) {
       setTimeout(() => {
-        navigate(`/result-page/${id}`);
+        navigate("/result-page");
       }, 400);
     }
 
@@ -52,6 +65,7 @@ function Games() {
       question?.questions[currentQuestion].answer.trim().toLowerCase() ===
       response?.trim().toLowerCase()
     ) {
+      notifySuccess();
       setTimeout(() => {
         setCurrentQuestion(currentQuestion + 1);
         setScore(score + 1);
@@ -61,11 +75,10 @@ function Games() {
         }
       }, 1800);
     } else {
-      alert(
-        `faux!, la bonne réponse était: \n${question?.questions[currentQuestion].answer}`,
-      );
+      notify(question?.questions[currentQuestion].answer || "non disponible");
       setCurrentQuestion(currentQuestion + 1);
       setResponse("");
+
       if (editorRef.current) {
         editorRef.current.setValue("");
       }
@@ -74,10 +87,10 @@ function Games() {
 
   // score local storage update
   useEffect(() => {
-    localStorage.setItem(`score${id}`, JSON.stringify(score));
-  }, [id, score]);
+    localStorage.setItem("score", JSON.stringify(score));
+  }, [score]);
 
-  console.log(localStorage);
+  console.log(currentQuestion, "/", question?.questions.length);
 
   return (
     <div className="editorContainer">
@@ -103,10 +116,13 @@ function Games() {
           onChange={(value) => setResponse(value)}
           onMount={handleEditorDidMount}
         />
+        <div>
+          <button className="responsBtn" type="button" onClick={handleClick}>
+            Répondre
+          </button>
+          <ToastContainer />
+        </div>
       </div>
-      <button className="responsBtn" type="button" onClick={handleClick}>
-        Réponse
-      </button>
     </div>
   );
 }
