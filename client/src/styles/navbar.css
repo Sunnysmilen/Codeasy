@@ -27,6 +27,7 @@
     width: 100%;
     right: 0;
     visibility: visible;
+    z-index: 1;
   }
 
   .nav-links {

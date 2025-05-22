@@ -1,15 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router";
+
 import "./HomePage.css";
 
-
 function HomePage() {
-  localStorage.setItem("score", "");
-
-  const savedScore = localStorage.getItem("score");
-
-  savedScore
-    ? console.log("Le score est: ${savedScore}")
-    : console.log("Aucun score");
+  useEffect(() => {
+    localStorage.setItem("score", JSON.stringify(0));
+  }, []);
 
   return (
     <div className="homepage-container">
@@ -25,7 +22,6 @@ function HomePage() {
       <Link to="/summary-page">
         <button type="button">C'est parti !</button>
       </Link>
-
     </div>
   );
 }
