@@ -41,7 +41,7 @@
     height: 100%;
     padding-top: 2rem;
     visibility: hidden;
-    background-color: #1f275c;
+    background-color: #252746;
   }
 
   .navbar-burger {
@@ -61,11 +61,11 @@
   .burger-bar::before,
   .burger-bar::after {
     display: block;
-    width: 60px;
+    width: 45px;
     height: 3px;
     position: relative;
     border-radius: 3px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
   }
 
   .burger-bar::before,
@@ -123,7 +123,7 @@
     height: 100%;
     padding-top: 2rem;
     visibility: hidden;
-    background-color: #586d96;
+    background-color: #252746;
   }
 
   .navbar-burger {
@@ -143,11 +143,11 @@
   .burger-bar::before,
   .burger-bar::after {
     display: block;
-    width: 60px;
+    width: 50px;
     height: 3px;
     position: relative;
     border-radius: 3px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 253, 253);
   }
 
   .burger-bar::before,
@@ -177,7 +177,6 @@
     justify-content: space-around;
     position: fixed;
     width: 100%;
-    padding: 1rem;
     min-height: 1rem;
     background-color: #586d96;
     color: white;
