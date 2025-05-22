@@ -16,12 +16,33 @@
 }
 /* Barre de progression */
 .progressBar {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 .notionText {
   color: var(--text-color);
   text-align: center;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  width: 97%;
+}
+
+.exercise {
+  margin-top: 0.5em;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  border: solid #60ccf5;
+  width: 95%;
+  padding: 0.1em 0 0.1em 0.1em;
+  background-color: #60ccf5;
+  color: #1e1e1e;
+}
+
+.editor_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Bloc paragraphe énoncer */
@@ -59,12 +80,4 @@
   width: 90vw;
   margin-top: 2em;
   z-index: 0;
-}
-
-.exercise {
-  font-size: 0.8em;
-}
-
-alert {
-  background-color: var(--primary-color);
 }
