@@ -1,5 +1,6 @@
-import "../assets/styles/SummaryStyle.css";
+import "./SummaryStyle.css";
 import SummaryList from "./SummaryList";
+
 
 function SummaryPage () {
     return (
