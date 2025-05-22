@@ -26,7 +26,8 @@
     font-family: "Orbitron", sans-serif;
 
     &:hover {
-      background-color: #fde929;
+      background-color: #586d96;
+      color: white;
     }
   }
 }
