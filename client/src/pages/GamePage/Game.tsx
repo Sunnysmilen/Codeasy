@@ -2,50 +2,55 @@ import { Editor, type OnMount } from "@monaco-editor/react";
 import { useEffect, useRef, useState } from "react";
 import "./game.css";
 
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import data from "../../data/data.json";
 
-/*type QuestionType = {
+type Question = {
+  title: string;
+  course: string;
+  exercise: string;
+  answer: string;
+};
+
+type QuestionType = {
   id: number;
   theme: string;
-  questions: [
-    {
-      title: string;
-      course: string;
-      exercise: string;
-      answer: string;
-    },
-  ];
-};*/
+  questions: Question[];
+};
 
 type IStandaloneCodeEditor = Parameters<OnMount>[0];
 
 function Games() {
   const { id } = useParams();
   const [response, setResponse] = useState<string | undefined>("");
-  const [question, setQuestion] = useState({});
+  const [question, setQuestion] = useState<QuestionType | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
+  const navigate = useNavigate();
   const editorRef = useRef<IStandaloneCodeEditor>(null);
   const handleEditorDidMount = (editor: IStandaloneCodeEditor) => {
     editorRef.current = editor;
   };
-  console.log(question);
   const themeIndex: number = Number(id) - 1;
 
+  // reload elements depending on id and theme index
   useEffect(() => {
     if (id) {
       setQuestion(data[themeIndex]);
     }
   }, [id, themeIndex]);
 
+  // Answer validation , score and next question
   const handleClick = () => {
-    console.log(response);
-    console.log(data[themeIndex].questions[currentQuestion].answer);
+    if (currentQuestion >= data[themeIndex].questions.length - 1) {
+      setTimeout(() => {
+        navigate("/result-page");
+      }, 400);
+    }
+
     if (
-      data[themeIndex].questions[currentQuestion].answer
-        .trim()
-        .toLowerCase() === response?.trim().toLowerCase()
+      question?.questions[currentQuestion].answer.trim().toLowerCase() ===
+      response?.trim().toLowerCase()
     ) {
       setTimeout(() => {
         setCurrentQuestion(currentQuestion + 1);
@@ -54,10 +59,10 @@ function Games() {
         if (editorRef.current) {
           editorRef.current.setValue("");
         }
-      }, 1000);
+      }, 1800);
     } else {
       alert(
-        `faux!, la bonne réponse était: \n${data[themeIndex].questions[currentQuestion].answer}`,
+        `faux!, la bonne réponse était: \n${question?.questions[currentQuestion].answer}`,
       );
       setCurrentQuestion(currentQuestion + 1);
       setResponse("");
@@ -66,6 +71,13 @@ function Games() {
       }
     }
   };
+
+  // score local storage update
+  useEffect(() => {
+    localStorage.setItem("score", JSON.stringify(score));
+  }, [score]);
+
+  console.log(currentQuestion, "/", question?.questions.length);
 
   return (
     <div className="editorContainer">
@@ -77,16 +89,16 @@ function Games() {
       />
 
       <p className="notionText">
-        {data[themeIndex].questions[currentQuestion].course}
+        {question?.questions[currentQuestion].course}
       </p>
       <p className="exercise">
-        À toi de jouer! {data[themeIndex].questions[currentQuestion].exercise}
+        À toi de jouer! {question?.questions[currentQuestion].exercise}
       </p>
       <div className="editor_wrapper">
         {" "}
         <Editor
           height={250}
-          defaultLanguage={data[themeIndex].theme.toLowerCase()}
+          defaultLanguage={question?.theme.toLowerCase()}
           theme="vs-dark"
           onChange={(value) => setResponse(value)}
           onMount={handleEditorDidMount}

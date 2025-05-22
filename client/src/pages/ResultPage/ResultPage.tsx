@@ -1,11 +1,17 @@
 import { Link } from "react-router";
+
 import "./ResultPage.css";
+/*import { useEffect, useState } from "react";*/
 
-interface ResultPageProps {
-  score: number;
-}
+function ResultPage() {
+  /*const [items, setItems] = useState([]);*/
 
-function ResultPage({ score }: ResultPageProps) {
+  /* useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("score"));
+    if (items) {
+      setItems(items);
+    }
+  }, []);*/
   return (
     <div className="resultpage-container">
       <section>
@@ -18,7 +24,7 @@ function ResultPage({ score }: ResultPageProps) {
           <div className="scoreDisplayBloc">
             <div className="blob1" />
             <div className="blob2" />
-            <div className="scoreDisplay">Score : {score}🚀 </div>
+            <div className="scoreDisplay">Score : items 🚀 </div>
           </div>
         </h1>
         <p>Notion terminée, tu gères.</p>

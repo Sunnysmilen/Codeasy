@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/result-page",
-        element: <ResultPage score={0} />,
+        element: <ResultPage />,
       },
       {
         path: "/apropos",
