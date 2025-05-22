@@ -1,37 +1,56 @@
-import Editor from "@monaco-editor/react";
-import { useState } from "react";
+import { Editor, type OnMount } from "@monaco-editor/react";
+import { useRef, useState } from "react";
 import "./game.css";
 
-function Games() {
-  const [response, setResponse] = useState("");
+import data from "../../data/data.json";
 
-  function handleEditorChange(value: string | undefined) {
-    console.log("Valeur actuelle :", value);
-    setResponse(value ?? "");
-  }
+type IStandaloneCodeEditor = Parameters<OnMount>[0];
+
+function Games() {
+  const [response, setResponse] = useState<string | undefined>("");
+
+  const [currentQuestion, setCurrentQuestion] = useState<number>(0);
+  const [score, setScore] = useState<number>(0);
+  const editorRef = useRef<IStandaloneCodeEditor>(null);
+
+  const handleEditorDidMount = (editor: IStandaloneCodeEditor) => {
+    editorRef.current = editor;
+  };
 
   const handleClick = () => {
-    console.log("valeur du bouton :", response);
-    console.log("type de la valeur :", typeof response);
+    console.log(response);
+    console.log(data[2].questions[currentQuestion].answer);
+    if (
+      data[2].questions[currentQuestion].answer.trim().toLowerCase() ===
+      response?.trim().toLowerCase()
+    ) {
+      setTimeout(() => {
+        setCurrentQuestion(currentQuestion + 1);
+        setScore(score + 1);
+        setResponse("");
+        if (editorRef.current) {
+          editorRef.current.setValue("");
+        }
+      }, 1000);
+    } else {
+      alert("faux!");
+      setCurrentQuestion(currentQuestion + 1);
+    }
   };
 
   return (
     <div className="editorContainer">
       <h1 className="editorHeader">Code Editor</h1>
-      <p className="notionText">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, maiores,
-        reprehenderit eaque illo tenetur corrupti assumenda animi aut maxime
-        eveniet tempora ab. Voluptas temporibus ad iste nam unde velit vel?
-      </p>
+      <p className="notionText">{data[2].questions[currentQuestion].course}</p>
+      <p>{data[2].questions[currentQuestion].exercise}</p>
 
       <Editor
         height={250}
-        defaultLanguage="html"
-        defaultValue="// for(let ...; ){}"
+        defaultLanguage={data[2].theme.toLowerCase()}
         theme="vs-dark"
-        onChange={handleEditorChange}
+        onChange={(value) => setResponse(value)}
+        onMount={handleEditorDidMount}
       />
-
       <button className="responsBtn" type="button" onClick={handleClick}>
         Réponse
       </button>
