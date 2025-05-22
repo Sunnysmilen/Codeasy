@@ -20,10 +20,11 @@ import data from "../../data/data.json";
 
 type IStandaloneCodeEditor = Parameters<OnMount>[0];
 
-const { id } = useParams();
+
 
 
 function Games() {
+  const { id } = useParams();
   const [response, setResponse] = useState<string | undefined>("");
   const [question, setQuestion] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
