@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import "./game.css";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useParams } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 import data from "../../data/data.json";
-import { toast, ToastContainer } from "react-toastify";
 
 type Question = {
   title: string;
