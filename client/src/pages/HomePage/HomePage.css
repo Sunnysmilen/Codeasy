@@ -27,7 +27,6 @@
       box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
       font-family: "Orbitron", sans-serif;
       background-color: #252746;
-
       &:hover {
         background-color: #586d96;
         color: white;
