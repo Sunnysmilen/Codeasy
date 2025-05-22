@@ -44,7 +44,7 @@ function Games() {
   const handleClick = () => {
     if (currentQuestion >= data[themeIndex].questions.length - 1) {
       setTimeout(() => {
-        navigate("/result-page");
+        navigate(`/result-page/${id}`);
       }, 400);
     }
 
@@ -74,10 +74,10 @@ function Games() {
 
   // score local storage update
   useEffect(() => {
-    localStorage.setItem("score", JSON.stringify(score));
-  }, [score]);
+    localStorage.setItem(`score${id}`, JSON.stringify(score));
+  }, [id, score]);
 
-  console.log(currentQuestion, "/", question?.questions.length);
+  console.log(localStorage);
 
   return (
     <div className="editorContainer">
