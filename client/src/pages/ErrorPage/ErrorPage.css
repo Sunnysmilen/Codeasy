@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+  .Error_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1f275c;
+    padding: 5rem;
+  }
+
+  .robot_lost {
+    width: 60%;
+    display: block;
+    margin: 3rem;
+  }
+
+  .lost {
+    color: white;
+    text-align: center;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .Error_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1f275c;
+    padding: 3rem;
+  }
+
+  .robot_lost {
+    width: 75%;
+    display: block;
+    margin: 3.5rem;
+  }
+
+  .lost {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .Error_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1f275c;
+    padding: 10rem;
+  }
+
+  .robot_lost {
+    width: 40%;
+    display: block;
+    margin: auto;
+  }
+
+  .lost {
+    color: white;
+    text-align: center;
+    padding-left: 4rem;
+  }
+}

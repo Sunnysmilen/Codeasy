@@ -1,0 +1,99 @@
+.resultpage-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  img {
+    height: auto;
+    width: 250px;
+    margin-top: -184px;
+    margin-left: -150px;
+  }
+  section {
+    border: solid black 2px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
+    margin-top: 160px;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+  }
+  button {
+    margin-top: 25px;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    width: 150px;
+    border: none;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.29);
+    font-family: "Orbitron", sans-serif;
+
+    &:hover {
+      background-color: #586d96;
+      color: white;
+    }
+  }
+}
+.resultpage-container h1 {
+  font-family: "Orbitron", sans-serif;
+  padding: 0 1rem 2rem 1rem;
+}
+.resultpage-container p {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  font-family: "Calibri", sans-serif;
+}
+/* Bloc score*/
+.scoreDisplayBloc {
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+}
+.scoreDisplayBloc ::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.blob1 {
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #3fe9ff,
+    #0000ff80,
+    transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.scoreDisplay {
+  padding: 14px 25px;
+  border-radius: 14px;
+  color: #fff;
+  z-index: 3;
+
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+.scoreDisplay::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+  );
+}
