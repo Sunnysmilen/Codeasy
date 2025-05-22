@@ -4,13 +4,9 @@ import "../src/assets/styles/games.css";
 function App() {
   return (
     <>
-      <header></header>
-
       <main>
         <Games />
       </main>
-
-      <footer></footer>
     </>
   );
 }
