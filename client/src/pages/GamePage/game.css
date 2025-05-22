@@ -1,3 +1,5 @@
+/* Bloc de la page */
+
 .editorContainer {
   display: flex;
   flex-direction: column;
@@ -5,18 +7,28 @@
   background-color: var(--primary-color);
 }
 
+/* Titre de la page */
 .editorHeader {
-  margin: 1em 0 0.5em 0;
+  margin-top: 1em;
   color: var(--text-color);
   font-family: "Orbitron", sans-serif;
 }
+/* Barre de progression */
+.progressBar {
+  margin-bottom: 0.5em;
+}
 
 .notionText {
-  margin-bottom: 1em;
   color: var(--text-color);
   text-align: center;
 }
 
+/* Bloc paragraphe énoncer */
+.dataText {
+  margin-bottom: 0.5em;
+}
+
+/* Boutton réponse */
 .responsBtn {
   margin-top: 0.7em;
   font-family: "Orbitron", sans-serif;

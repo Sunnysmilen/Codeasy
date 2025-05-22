@@ -1,7 +1,14 @@
-import { Link } from "react-router";
 import "./HomePage.css";
 
 function HomePage() {
+  localStorage.setItem("score", "");
+
+  const savedScore = localStorage.getItem("score");
+
+  savedScore
+    ? console.log("Le score est: ${savedScore}")
+    : console.log("Aucun score");
+
   return (
     <div className="homepage-container">
       <section>
@@ -12,9 +19,7 @@ function HomePage() {
         <h1>Bienvenue dans le monde du code ! </h1>
         <p>Pas besoin d’être un geek : ici, on apprend en s’amusant.</p>
       </section>
-      <Link to="/game">
-        <button type="button">C'est parti !</button>
-      </Link>
+      <button type="button">C'est parti !</button>
     </div>
   );
 }

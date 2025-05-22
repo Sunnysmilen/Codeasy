@@ -41,9 +41,14 @@ function Games() {
   return (
     <div className="editorContainer">
       <h1 className="editorHeader">Code Editor</h1>
-      <p className="notionText">{data[2].questions[currentQuestion].course}</p>
-      <p>{data[2].questions[currentQuestion].exercise}</p>
+      <progress
+        className="progressBar"
+        value={currentQuestion}
+        max={currentQuestion + 1}
+      />
 
+      <p className="notionText">{data[2].questions[currentQuestion].course}</p>
+      <p className="dataText">{data[2].questions[currentQuestion].exercise}</p>
       <Editor
         height={250}
         defaultLanguage={data[2].theme.toLowerCase()}
