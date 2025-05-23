@@ -54,7 +54,7 @@
     "questions": [
       {
         "title": "Hello World !",
-        "course": "JavaScript est un langage qui permet de rendre une page web interactive. Le plus simple pour commencer est d’écrire un message dans la console avec `console.log()`. C’est souvent la première ligne qu’on apprend !",
+        "course": "JavaScript est un langage qui permet de rendre une page web interactive. Le plus simple pour commencer, est d’écrire un message dans la console avec `console.log()`. C’est souvent la première ligne qu’on apprend !",
         "exercise": "Affiche Hello world! dans la console.",
         "answer": "console.log(\"Hello world!\");"
       },
