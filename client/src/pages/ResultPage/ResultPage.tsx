@@ -22,18 +22,15 @@ function ResultPage() {
           <img src={happy} alt="Loading ... Happy robot" />
         )}
         <h1>
-          Mission accomplie !
+          {score < 2
+            ? "Courage, réessaye encore!"
+            : "Notion terminée, tu gères!"}
           <div className="scoreDisplayBloc">
             <div className="blob1" />
             <div className="blob2" />
             <div className="scoreDisplay">Score : {score} 🚀 </div>
           </div>
         </h1>
-        <p>
-          {score < 2
-            ? "Courage, réessaye encore!"
-            : "Notion terminée, tu gères!"}
-        </p>
       </section>
       <Link to="/summary-page">
         <button type="button">Retour au thème</button>
