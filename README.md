@@ -8,6 +8,8 @@
   - [Les choses à retenir](#les-choses-à-retenir)
   - [FAQ](#faq)
     
+## Wireframe
+![wireframe_codeasy](https://github.com/user-attachments/assets/13589fe5-958a-46a0-bf9b-6e071fcfb38f)
 
 ## Installation & Utilisation
 
