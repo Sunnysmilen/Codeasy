@@ -70,6 +70,7 @@ function Games() {
 
     if (trimedAnswer === trimedResponse) {
       notifySuccess();
+      setScore(score + 1);
       if (lastQuestion) {
         setTimeout(() => {
           navigate(`/result-page/${id}`);
@@ -77,12 +78,11 @@ function Games() {
       } else {
         setTimeout(() => {
           setCurrentQuestion(currentQuestion + 1);
-          setScore(score + 1);
           setResponse("");
           if (editorRef.current) {
             editorRef.current.setValue("");
           }
-        }, 2000);
+        }, 2500);
       }
     }
     if (trimedAnswer !== trimedResponse) {
@@ -92,11 +92,13 @@ function Games() {
           navigate(`/result-page/${id}`);
         }, 2400);
       } else {
-        setCurrentQuestion(currentQuestion + 1);
-        setResponse("");
-        if (editorRef.current) {
-          editorRef.current.setValue("");
-        }
+        setTimeout(() => {
+          setCurrentQuestion(currentQuestion + 1);
+          setResponse("");
+          if (editorRef.current) {
+            editorRef.current.setValue("");
+          }
+        }, 2500);
       }
     }
   };
@@ -132,12 +134,6 @@ function Games() {
           onChange={(value) => setResponse(value)}
           onMount={handleEditorDidMount}
         />
-        <div>
-          <button className="responsBtn" type="button" onClick={handleClick}>
-            Répondre
-          </button>
-          <ToastContainer />
-        </div>
       </div>
       <button className="responsBtn" type="button" onClick={handleClick}>
         Réponse
