@@ -51,9 +51,7 @@ Système de points pour motiver et suivre la progression
 ## Aperçu
 
 ## Contributeurs
-[Nico Garcia](https://github.com/Nico-Garcia-dev)  [LAU97190](https://github.com/LAU97190)
-[MKNG18](https://github.com/MKNG18)  [Vinzifinz](https://github.com/Vinzifinz)
-[SunnySmilen](https://github.com/Sunnysmilen)
+ [Nico Garcia <br> <img src="https://avatars.githubusercontent.com/Nico-Garcia-dev" alt="Nico-Garcia" width="100" height="100">](https://github.com/Nico-Garcia-dev)<br>[LAU97190 <br> <img src="https://avatars.githubusercontent.com/LAU97190" alt="LAU97190" width="100" height="100">](https://github.com/LAU97190)<br>[MKNG18 <br> <img src="https://avatars.githubusercontent.com/MKNG18" alt="MKNG18" width="100" height="100">](https://github.com/MKNG18)<br>[Vinzifinz <br> <img src="https://avatars.githubusercontent.com/Vinzifinz" alt="Vinzifinz" width="100" height="100">](https://github.com/Vinzifinz)<br>[SunnySmilen <br> <img src="https://avatars.githubusercontent.com/SunnySmilen" alt="SunnySmilen" width="100" height="100">](https://github.com/Sunnysmilen)
 
 
 
