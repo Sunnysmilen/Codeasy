@@ -105,10 +105,10 @@ function Games() {
 
   // score local storage update
   useEffect(() => {
-    localStorage.setItem("score", JSON.stringify(score));
-  }, [score]);
+    localStorage.setItem(`score${id}`, JSON.stringify(score));
+  }, [id, score]);
 
-  console.log(currentQuestion, "/", question?.questions.length);
+  //console.log(currentQuestion, "/", question?.questions.length);
 
   return (
     <div className="editorContainer">
