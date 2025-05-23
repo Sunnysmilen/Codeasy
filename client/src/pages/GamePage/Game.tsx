@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import "./game.css";
 
 import { useNavigate, useParams } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 import data from "../../data/data.json";
 
 type Question = {
@@ -33,6 +34,19 @@ function Games() {
   };
   const themeIndex: number = Number(id) - 1;
 
+  const notify = (correctAnswer: string) => {
+    toast.error(`😭 😭 😭 La bonne réponse était : ${correctAnswer}`, {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+  const notifySuccess = () => {
+    toast.success("👏👏👏 Bonne réponse !", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+
   // reload elements depending on id and theme index
   useEffect(() => {
     if (id) {
@@ -40,7 +54,7 @@ function Games() {
     }
   }, [id, themeIndex]);
 
-  // Answer validation , score and next question
+  // Answer validation , score and next question after button click
   const handleClick = () => {
     // trimed strings to compare values:
     const trimedAnswer = question?.questions[currentQuestion].answer
@@ -49,31 +63,40 @@ function Games() {
       .replace(/ /g, "");
 
     const trimedResponse = response?.toLowerCase().trim().replace(/ /g, "");
-    //console.log(trimedAnswer, trimedResponse);
 
-    if (currentQuestion >= data[themeIndex].questions.length - 1) {
-      setTimeout(() => {
-        navigate(`/result-page/${id}`);
-      }, 400);
-    }
+    // verifying las question condition to trigger result page redirection
+    const lastQuestion =
+      currentQuestion === data[themeIndex].questions.length - 1;
 
     if (trimedAnswer === trimedResponse) {
-      setTimeout(() => {
+      notifySuccess();
+      if (lastQuestion) {
+        setTimeout(() => {
+          navigate(`/result-page/${id}`);
+        }, 2400);
+      } else {
+        setTimeout(() => {
+          setCurrentQuestion(currentQuestion + 1);
+          setScore(score + 1);
+          setResponse("");
+          if (editorRef.current) {
+            editorRef.current.setValue("");
+          }
+        }, 2000);
+      }
+    }
+    if (trimedAnswer !== trimedResponse) {
+      notify(question?.questions[currentQuestion].answer || "non disponible");
+      if (lastQuestion) {
+        setTimeout(() => {
+          navigate(`/result-page/${id}`);
+        }, 2400);
+      } else {
         setCurrentQuestion(currentQuestion + 1);
-        setScore(score + 1);
         setResponse("");
         if (editorRef.current) {
           editorRef.current.setValue("");
         }
-      }, 1800);
-    } else {
-      alert(
-        `faux!, la bonne réponse était: \n${question?.questions[currentQuestion].answer}`,
-      );
-      setCurrentQuestion(currentQuestion + 1);
-      setResponse("");
-      if (editorRef.current) {
-        editorRef.current.setValue("");
       }
     }
   };
@@ -113,6 +136,7 @@ function Games() {
       <button className="responsBtn" type="button" onClick={handleClick}>
         Réponse
       </button>
+      <ToastContainer />
     </div>
   );
 }
