@@ -10,7 +10,10 @@ export default function Navbar() {
   return (
     <>
       <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
-        <img src={logo} alt="Logo codeasy" className="logo" />
+        <Link to={"/homepage"}>
+          <img src={logo} alt="Logo codeasy" className="logo" />
+        </Link>
+
         <ul className="nav-links">
           <li className="navbar-item">
             <Link
