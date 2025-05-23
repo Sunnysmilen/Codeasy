@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import { useParams } from "react-router";
 import "./ResultPage.css";
+import sad from "../../assets/images/robot wait.gif";
+import happy from "../../assets/images/you did it.gif";
 
 function ResultPage() {
   const { id } = useParams();
@@ -14,10 +16,11 @@ function ResultPage() {
   return (
     <div className="resultpage-container">
       <section>
-        <img
-          src="/image-resultat.png"
-          alt="Robot félicitant le résultat d'un pouce levé"
-        />
+        {score < 2 ? (
+          <img src={sad} alt="Loading ... Try again robot" />
+        ) : (
+          <img src={happy} alt="Loading ... Happy robot" />
+        )}
         <h1>
           Mission accomplie !
           <div className="scoreDisplayBloc">
@@ -28,7 +31,7 @@ function ResultPage() {
         </h1>
         <p>
           {score < 2
-            ? "ho..lly..shit!! you suck!"
+            ? "Courage, réessaye encore!"
             : "Notion terminée, tu gères!"}
         </p>
       </section>
