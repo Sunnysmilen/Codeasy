@@ -29,19 +29,19 @@
     "questions": [
       {
         "title": "Largeur d'un élément",
-        "course": "Tu peux donner une largeur à une boîte sur ta page avec la propriété CSS width. Par exemple, width: 10em veut dire : 'fais cette boîte aussi large que 10 lettres M'.",
+        "course": "Tu peux donner une largeur à une boîte sur ta page avec la propriété CSS width. Par exemple, { width: 10em; } veut dire : 'fais cette boîte aussi large que 10 lettres M'.",
         "exercise": "Donne une largeur de 10em à une div.",
         "answer": "div { width: 10em; }"
       },
       {
         "title": "Hauteur d'un élément",
-        "course": "Comme pour la largeur, tu peux aussi dire à ta boîte quelle hauteur elle doit avoir avec height. Par exemple, height: 5em veut dire : 'fais-la haute comme 5 lettres M'.",
+        "course": "Comme pour la largeur, tu peux aussi dire à ta boîte quelle hauteur elle doit avoir avec height. Par exemple, { height: 5em; } veut dire : 'fais-la haute comme 5 lettres M'.",
         "exercise": "Donne une hauteur de 5em à une div.",
         "answer": "div { height: 5em; }"
       },
       {
         "title": "Cacher un élément",
-        "course": "Tu peux cacher quelque chose sur la page avec display: none. Il sera là, mais invisible. C’est pratique pour afficher ou cacher des choses plus tard.",
+        "course": "Tu peux cacher quelque chose sur la page avec { display: none; } Il sera là, mais invisible. C’est pratique pour afficher ou cacher des choses plus tard.",
         "exercise": "Cache tous les paragraphes avec display.",
         "answer": "p { display: none; }"
       }
