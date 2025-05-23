@@ -1,4 +1,4 @@
- ![#robot <img src="https://github.com/user-attachments/assets/1b673f80-9c89-4e00-8ff1-220204cba717" alt="Codeasy" width=100%]
+ ![#robot <img src="https://github.com/user-attachments/assets/1b673f80-9c89-4e00-8ff1-220204cba717" alt="Codeasy" width=100%/>]
 
 ## Table des Matières
 - [Codeasy](#robot)
