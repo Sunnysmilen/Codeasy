@@ -5,8 +5,8 @@ export default function ErrorPage() {
     <>
       <div className="Error_container">
         {" "}
-        <h1 className="lost">Player, you are lost!</h1>
-        <br /> <h1 className="lost"> Let's go back to our homepage</h1>
+        <h1 className="lost">Joueur, tu es perdu !</h1>
+        <br /> <h1 className="lost"> Reviens vers la page d'accueil 🚀 </h1>
         <img
           className="robot_lost"
           src="/image-accueil.webp"
