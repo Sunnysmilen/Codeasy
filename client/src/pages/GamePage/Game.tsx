@@ -34,6 +34,19 @@ function Games() {
   };
   const themeIndex: number = Number(id) - 1;
 
+  const notify = (correctAnswer: string) => {
+    toast.error(`😭 😭 😭 La bonne réponse était : ${correctAnswer}`, {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+  const notifySuccess = () => {
+    toast.success("👏👏👏 Bonne réponse !", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+
   // reload elements depending on id and theme index
   useEffect(() => {
     if (id) {
@@ -41,18 +54,6 @@ function Games() {
     }
   }, [id, themeIndex]);
 
-  const notify = (correctAnswer: string) => {
-    toast.error(`😭 😭 😭 La bonne réponse était : ${correctAnswer}`, {
-      position: "top-right",
-      autoClose: 3000,
-    });
-  };
-  const notifySuccess = () => {
-    toast.success("👏👏👏 Bonne réponse !", {
-      position: "top-right",
-      autoClose: 3000,
-    });
-  };
   // Answer validation , score and next question
   const handleClick = () => {
     // trimed strings to compare values:
@@ -62,41 +63,52 @@ function Games() {
       .replace(/ /g, "");
 
     const trimedResponse = response?.toLowerCase().trim().replace(/ /g, "");
-    //console.log(trimedAnswer, trimedResponse);
 
-    if (currentQuestion >= data[themeIndex].questions.length - 1) {
-      setTimeout(() => {
-        navigate("/result-page");
-      }, 400);
-    }
+    // verifying las question condition to trigger result page redirection
+    const lastQuestion =
+      currentQuestion === data[themeIndex].questions.length - 1;
 
     if (trimedAnswer === trimedResponse) {
       notifySuccess();
-      setTimeout(() => {
-        setCurrentQuestion(currentQuestion + 1);
-        setScore(score + 1);
-        setResponse("");
-        if (editorRef.current) {
-          editorRef.current.setValue("");
-        }
-      }, 1800);
-    } else {
+      setScore(score + 1);
+      if (lastQuestion) {
+        setTimeout(() => {
+          navigate(`/result-page/${id}`);
+        }, 2400);
+      } else {
+        setTimeout(() => {
+          setCurrentQuestion(currentQuestion + 1);
+          setResponse("");
+          if (editorRef.current) {
+            editorRef.current.setValue("");
+          }
+        }, 2500);
+      }
+    }
+    if (trimedAnswer !== trimedResponse) {
       notify(question?.questions[currentQuestion].answer || "non disponible");
-      setCurrentQuestion(currentQuestion + 1);
-      setResponse("");
-
-      if (editorRef.current) {
-        editorRef.current.setValue("");
+      if (lastQuestion) {
+        setTimeout(() => {
+          navigate(`/result-page/${id}`);
+        }, 2400);
+      } else {
+        setTimeout(() => {
+          setCurrentQuestion(currentQuestion + 1);
+          setResponse("");
+          if (editorRef.current) {
+            editorRef.current.setValue("");
+          }
+        }, 2500);
       }
     }
   };
 
   // score local storage update
   useEffect(() => {
-    localStorage.setItem("score", JSON.stringify(score));
-  }, [score]);
+    localStorage.setItem(`score${id}`, JSON.stringify(score));
+  }, [id, score]);
 
-  console.log(currentQuestion, "/", question?.questions.length);
+  //console.log(currentQuestion, "/", question?.questions.length);
 
   return (
     <div className="editorContainer">
@@ -122,13 +134,11 @@ function Games() {
           onChange={(value) => setResponse(value)}
           onMount={handleEditorDidMount}
         />
-        <div>
-          <button className="responsBtn" type="button" onClick={handleClick}>
-            Répondre
-          </button>
-          <ToastContainer />
-        </div>
       </div>
+      <button className="responsBtn" type="button" onClick={handleClick}>
+        Réponse
+      </button>
+      <ToastContainer />
     </div>
   );
 }

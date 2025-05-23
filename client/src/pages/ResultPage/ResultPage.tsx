@@ -9,7 +9,7 @@ function ResultPage() {
   const scoreString = localStorage.getItem(scoreKey);
   const score = scoreString ? JSON.parse(scoreString) : 0;
 
-  console.log(localStorage);
+  //console.log(localStorage);
 
   return (
     <div className="resultpage-container">
