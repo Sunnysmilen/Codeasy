@@ -13,7 +13,7 @@
 
 
 ## Description
-Cette application a été réalisé en collaboration durant un hackathon.
+Cette application a été réalisé en collaboration durant un hackathon.<br>
 Une application ludique et éducative pour initier enfants et parents à la programmation, inspirée de l’approche Mimo.<br>
 Des mini-quizz interactifs avec du code à compléter.<br>
 Un petit cours clair et rapide à la suite pour bien comprendre la notion.<br><br>
