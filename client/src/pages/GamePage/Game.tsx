@@ -1,7 +1,7 @@
 import { Editor, type OnMount } from "@monaco-editor/react";
 import { useEffect, useRef, useState } from "react";
 import "./game.css";
-
+import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useParams } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import data from "../../data/data.json";
@@ -54,7 +54,7 @@ function Games() {
     }
   }, [id, themeIndex]);
 
-  // Answer validation , score and next question after button click
+  // Answer validation , score and next question
   const handleClick = () => {
     // trimed strings to compare values:
     const trimedAnswer = question?.questions[currentQuestion].answer
@@ -103,10 +103,10 @@ function Games() {
 
   // score local storage update
   useEffect(() => {
-    localStorage.setItem(`score${id}`, JSON.stringify(score));
-  }, [id, score]);
+    localStorage.setItem("score", JSON.stringify(score));
+  }, [score]);
 
-  console.log(localStorage);
+  console.log(currentQuestion, "/", question?.questions.length);
 
   return (
     <div className="editorContainer">
@@ -132,6 +132,12 @@ function Games() {
           onChange={(value) => setResponse(value)}
           onMount={handleEditorDidMount}
         />
+        <div>
+          <button className="responsBtn" type="button" onClick={handleClick}>
+            Répondre
+          </button>
+          <ToastContainer />
+        </div>
       </div>
       <button className="responsBtn" type="button" onClick={handleClick}>
         Réponse
