@@ -30,15 +30,7 @@ export default function Navbar() {
               Thèmes quiz
             </Link>
           </li>
-          <li className="navbar-item">
-            <Link
-              to={"/result-page"}
-              className="navbar-link"
-              onClick={() => setShowLinks(false)}
-            >
-              Résultats
-            </Link>
-          </li>
+
           <li className="navbar-item">
             <Link
               to={"/apropos"}

@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+/*import { useEffect } from "react";*/
 import { Link } from "react-router";
 
 import "./HomePage.css";
 
 function HomePage() {
-  useEffect(() => {
+  /* useEffect(() => {
     localStorage.setItem("score", JSON.stringify(0));
   }, []);
-
+  console.log(localStorage);*/
   return (
     <div className="homepage-container">
       <section>

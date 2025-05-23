@@ -1,64 +1,207 @@
-/* Bloc de la page */
+@media screen and (max-width: 768px) {
+  /* Bloc de la page */
 
-.editorContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .editorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  background-color: var(--primary-color);
-}
-
-/* Titre de la page */
-.editorHeader {
-  margin-top: 1em;
-  color: var(--text-color);
-  font-family: "Orbitron", sans-serif;
-}
-/* Barre de progression */
-.progressBar {
-  margin-bottom: 0.5em;
-}
-
-.notionText {
-  color: var(--text-color);
-  text-align: center;
-}
-
-/* Bloc paragraphe énoncer */
-.dataText {
-  margin-bottom: 0.5em;
-}
-
-/* Boutton réponse */
-.responsBtn {
-  margin-top: 0.7em;
-  font-family: "Orbitron", sans-serif;
-  font-size: medium;
-  color: black;
-  margin-bottom: 1em;
-  background-color: #60ccf5;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  &:hover {
-    color: var(--tertiary-color);
-    transform: scale(1.05);
+    background-color: var(--primary-color);
   }
-  &:active {
-    transform: scale(0.95);
+
+  /* Titre de la page */
+  .editorHeader {
+    margin-top: 0.5em;
+    color: var(--text-color);
+    font-family: "Orbitron", sans-serif;
+  }
+  /* Barre de progression */
+  .progressBar {
+    margin: 0.5em;
+    width: 80%;
+  }
+
+  .notionText {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  /* Bloc paragraphe énoncer */
+  .dataText {
+    margin-bottom: 0.5em;
+  }
+
+  /* Boutton réponse */
+  .responsBtn {
+    margin-top: 0.7em;
+    font-family: "Orbitron", sans-serif;
+    font-size: medium;
+    color: black;
+    margin-bottom: 1em;
+    background-color: #60ccf5;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    &:hover {
+      color: var(--tertiary-color);
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .editor_wrapper {
+    width: 90%;
+    margin-top: 1em;
+    z-index: 0;
+  }
+
+  .exercise {
+    font-size: 1em;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Bloc de la page */
 
-.editor_wrapper {
-  width: 90vw;
-  margin-top: 2em;
-  z-index: 0;
+  .editorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--primary-color);
+  }
+
+  /* Titre de la page */
+  .editorHeader {
+    margin-top: 0.5em;
+    color: var(--text-color);
+    font-family: "Orbitron", sans-serif;
+  }
+  /* Barre de progression */
+  .progressBar {
+    margin: 0.5em;
+    width: 80%;
+  }
+
+  .notionText {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+  /* Bloc paragraphe énoncer */
+  .dataText {
+    margin-bottom: 0.5em;
+  }
+
+  /* Boutton réponse */
+  .responsBtn {
+    margin-top: 0.7em;
+    font-family: "Orbitron", sans-serif;
+    font-size: medium;
+    color: black;
+    margin-bottom: 1em;
+    background-color: #60ccf5;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    &:hover {
+      color: var(--tertiary-color);
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .editor_wrapper {
+    width: 90%;
+    margin-top: 1em;
+    z-index: 0;
+  }
+
+  .exercise {
+    font-size: 1.5em;
+  }
 }
+@media screen and (min-width: 992px) {
+  /* Bloc de la page */
 
-.exercise {
-  font-size: .8em;
+  .editorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--primary-color);
+  }
+
+  /* Titre de la page */
+  .editorHeader {
+    margin-top: 5em;
+    color: var(--text-color);
+    font-family: "Orbitron", sans-serif;
+  }
+  /* Barre de progression */
+  .progressBar {
+    margin: 0.5em;
+    width: 80%;
+  }
+
+  .notionText {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+  /* Bloc paragraphe énoncer */
+  .dataText {
+    margin-bottom: 0.5em;
+  }
+
+  /* Boutton réponse */
+  .responsBtn {
+    margin-top: 0.7em;
+    font-family: "Orbitron", sans-serif;
+    font-size: medium;
+    color: black;
+    margin-bottom: 1em;
+    background-color: #60ccf5;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    &:hover {
+      color: var(--tertiary-color);
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .editor_wrapper {
+    width: 90%;
+    margin-top: 1em;
+    z-index: 0;
+  }
+
+  .exercise {
+    font-size: 1.5em;
+  }
 }

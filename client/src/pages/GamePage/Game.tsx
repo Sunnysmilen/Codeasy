@@ -1,8 +1,9 @@
 import { Editor, type OnMount } from "@monaco-editor/react";
 import { useEffect, useRef, useState } from "react";
 import "./game.css";
-
+import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useParams } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 import data from "../../data/data.json";
 
 type Question = {
@@ -40,18 +41,37 @@ function Games() {
     }
   }, [id, themeIndex]);
 
+  const notify = (correctAnswer: string) => {
+    toast.error(`😭 😭 😭 La bonne réponse était : ${correctAnswer}`, {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  };
+  const notifySuccess = () => {
+    toast.success("👏👏👏 Bonne réponse !", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  };
   // Answer validation , score and next question
   const handleClick = () => {
+    // trimed strings to compare values:
+    const trimedAnswer = question?.questions[currentQuestion].answer
+      .toLowerCase()
+      .trim()
+      .replace(/ /g, "");
+
+    const trimedResponse = response?.toLowerCase().trim().replace(/ /g, "");
+    //console.log(trimedAnswer, trimedResponse);
+
     if (currentQuestion >= data[themeIndex].questions.length - 1) {
       setTimeout(() => {
         navigate("/result-page");
       }, 400);
     }
 
-    if (
-      question?.questions[currentQuestion].answer.trim().toLowerCase() ===
-      response?.trim().toLowerCase()
-    ) {
+    if (trimedAnswer === trimedResponse) {
+      notifySuccess();
       setTimeout(() => {
         setCurrentQuestion(currentQuestion + 1);
         setScore(score + 1);
@@ -61,11 +81,10 @@ function Games() {
         }
       }, 1800);
     } else {
-      alert(
-        `faux!, la bonne réponse était: \n${question?.questions[currentQuestion].answer}`,
-      );
+      notify(question?.questions[currentQuestion].answer || "non disponible");
       setCurrentQuestion(currentQuestion + 1);
       setResponse("");
+
       if (editorRef.current) {
         editorRef.current.setValue("");
       }
@@ -103,10 +122,13 @@ function Games() {
           onChange={(value) => setResponse(value)}
           onMount={handleEditorDidMount}
         />
+        <div>
+          <button className="responsBtn" type="button" onClick={handleClick}>
+            Répondre
+          </button>
+          <ToastContainer />
+        </div>
       </div>
-      <button className="responsBtn" type="button" onClick={handleClick}>
-        Réponse
-      </button>
     </div>
   );
 }
