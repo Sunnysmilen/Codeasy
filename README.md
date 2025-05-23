@@ -1,5 +1,4 @@
-
- ![#robot](https://github.com/user-attachments/assets/1b673f80-9c89-4e00-8ff1-220204cba717) 
+ ![#robot <img src="https://github.com/user-attachments/assets/1b673f80-9c89-4e00-8ff1-220204cba717" alt="Codeasy" width=100%]
 
 ## Table des Matières
 - [Codeasy](#robot)
@@ -14,6 +13,7 @@
 
 
 ## Description
+Cette application a été réalisé en collaboration durant un hackathon.
 Une application ludique et éducative pour initier enfants et parents à la programmation, inspirée de l’approche Mimo.<br>
 Des mini-quizz interactifs avec du code à compléter.<br>
 Un petit cours clair et rapide à la suite pour bien comprendre la notion.<br><br>
@@ -48,13 +48,14 @@ Système de points pour motiver et suivre la progression
 | `npm run dev`                           | Démarrez les deux serveurs (client et serveur) dans un seul terminal|
 | `npm biome check --write client`        | Vérification et correction du code avec Biome                       |
 
-## Aperçu
 
 ## Contributeurs
  [Nico Garcia <br> <img src="https://avatars.githubusercontent.com/Nico-Garcia-dev" alt="Nico-Garcia" width="100" height="100">](https://github.com/Nico-Garcia-dev)<br>[LAU97190 <br> <img src="https://avatars.githubusercontent.com/LAU97190" alt="LAU97190" width="100" height="100">](https://github.com/LAU97190)<br>[MKNG18 <br> <img src="https://avatars.githubusercontent.com/MKNG18" alt="MKNG18" width="100" height="100">](https://github.com/MKNG18)<br>[Vinzifinz <br> <img src="https://avatars.githubusercontent.com/Vinzifinz" alt="Vinzifinz" width="100" height="100">](https://github.com/Vinzifinz)<br>[SunnySmilen <br> <img src="https://avatars.githubusercontent.com/SunnySmilen" alt="SunnySmilen" width="100" height="100">](https://github.com/Sunnysmilen)
 
 
+## Licence
 
+Ce projet est sous licence [MIT].
 
 
 
